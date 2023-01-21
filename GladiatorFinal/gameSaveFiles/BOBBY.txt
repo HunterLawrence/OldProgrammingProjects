@@ -1,0 +1,22 @@
+Name:BOBBY
+Health:100.0
+Strength:1.0
+Defense:1.0
+Dexterity:1.0
+Armor:RG1
+Weapon:WK1
+ArmorLight:1
+ArmorMedium:1
+ArmorHeavy:1
+WeaponSword:1
+WeaponMace:1
+WeaponKnife:2
+TrainHealth:0
+TrainStrength:0
+TrainDefense:0
+TrainDexterity:0
+PomotionLevel:0
+Balance:200
+Inventory:FT1
+GrandChampion:Grand Champion Cassey Lawrence
+Defeat:true

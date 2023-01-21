@@ -1,0 +1,22 @@
+Name:BLANK
+Health:150.0
+Strength:1.25
+Defense:1.25
+Dexterity:1.0
+Armor:RG1
+Weapon:FT1
+ArmorLight:1
+ArmorMedium:1
+ArmorHeavy:1
+WeaponSword:1
+WeaponMace:1
+WeaponKnife:1
+TrainHealth:0
+TrainStrength:0
+TrainDefense:0
+TrainDexterity:0
+PomotionLevel:0
+Balance:1000
+Inventory:AL3, AM3, AH3, WK3, WS3, WM3
+GrandChampion:BLANK
+Defeat:false
