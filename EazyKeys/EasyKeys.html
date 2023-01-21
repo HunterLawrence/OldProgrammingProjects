@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="">
+ <link rel = "stylesheet" href = "Style.css">
+  <body>
+ 
+    <div id="logo">
+ 
+      <div class="vista-create-share" data-vista-create-id="628eb3731be5383fab66542f"></div>
+      <script type="text/javascript" src="https://static.create.vista.com/js/embedded_v1.min.js?v=1.111.7" async></script>
+ 
+    </div>
+	
+	<script type="text/javascript">
+		const keys = document.querySelectorAll(".key"),
+  note = document.querySelector(".nowplaying"),
+  hints = document.querySelectorAll(".hints");
+ 
+function playNote(e) {
+  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`),
+    key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+ 
+  if (!key) return;
+ 
+  const keyNote = key.getAttribute("data-note");
+ 
+  key.classList.add("playing");
+  note.innerHTML = keyNote;
+  audio.currentTime = 0;
+  audio.play();
+}
+ 
+function removeTransition(e) {
+  if (e.propertyName !== "transform") return;
+  this.classList.remove("playing");
+}
+ 
+function hintsOn(e, index) {
+  e.setAttribute("style", "transition-delay:" + index * 50 + "ms");
+}
+ 
+hints.forEach(hintsOn);
+ 
+keys.forEach(key => key.addEventListener("transitionend", removeTransition));
+ 
+window.addEventListener("keydown", playNote);
+
+// reactions for top menu buttons
+// Requirements: 
+// 	-pictures “Marry Had A Little Lamb.png”, “aboutInfo.png”, “learnPage.png”,
+// 	  and “communityPage.png” be saved in the same folder as the HTML file.
+
+function displaySheets() {
+		// get the div
+		div = document.getElementById("middleSpace");
+		// clear the div
+		div.innerHTML="";
+		
+		// add a background to the div
+		background = document.createElement("div");
+		background.setAttribute("height", "450");
+		background.style.width="100%";
+		
+		// add the background to the div
+		div.appendChild(background);
+		
+		// add content to the div
+		//		generic sheet music line
+		song = document.createElement("img");
+		song.setAttribute("src", "Marry Had A Little Lamb.png");
+		song.setAttribute("height", "400");
+		song.style.width="100%"
+		song.style.position="absolute";
+		song.style.top=background.top + 10;
+		song.style.left="0";
+		div.appendChild(song);
+	}
+	
+	function displayAbout() {
+		// get the div
+		div = document.getElementById("middleSpace");
+		// clear the div
+		div.innerHTML="";
+		
+		// add a background to the div
+		background = document.createElement("div");
+		background.setAttribute("height", "450");
+		background.style.width="100%";
+		
+		// add the background to the div
+		div.appendChild(background);
+		
+		// add content to the div
+		//		generic about information
+		aboutInfo = document.createElement("img");
+		aboutInfo.setAttribute("src", "aboutInfo.png");
+		aboutInfo.setAttribute("height", "400");
+		aboutInfo.style.position="absolute";
+		aboutInfo.style.top=background.top;
+		aboutInfo.style.left="0";
+		div.appendChild(aboutInfo);
+		
+	}
+	
+	function displayLearn() {
+		// get the div
+		div = document.getElementById("middleSpace");
+		// clear the div
+		div.innerHTML="";
+		
+		// add a background to the div
+		background = document.createElement("div");
+		background.setAttribute("height", "450");
+		background.style.width="100%";
+		
+		// add the background to the div
+		div.appendChild(background);
+		
+		// add content to the div
+		//		generic learning content
+		learnPage = document.createElement("img");
+		learnPage.setAttribute("src", "learnPage.png");
+		learnPage.setAttribute("height", "425");
+		learnPage.style.position="absolute";
+		learnPage.style.top=background.top;
+		learnPage.style.left="0";
+		learnPage.style.width="100%";
+		div.appendChild(learnPage);
+
+		
+	}
+	
+	function displayCommunity() {
+		// get the div
+		div = document.getElementById("middleSpace");
+		// clear the div
+		div.innerHTML="";
+		
+		// add a background to the div
+		background = document.createElement("div");
+		background.setAttribute("height", "500");
+		background.style.width="100%";
+		
+		// add the background to the div
+		div.appendChild(background);
+		
+		// add content to the div
+		// 		generic community page
+		communityPage = document.createElement("img");
+		communityPage.setAttribute("src", "communityPage.png");
+		communityPage.setAttribute("height", "400");
+		communityPage.style.position="absolute";
+		communityPage.style.top=background.top;
+		communityPage.style.left="0";
+		communityPage.style.width="100%";
+		div.appendChild(communityPage);
+	}
+
+	</script>
+ 
+    <div id="buttonDiv">
+      <button style="button" id="sheetsButton" onClick="displaySheets()">Sheets</button>
+      <button style="button" id="aboutButton" onClick="displayAbout()">About</button>
+      <button style="button" id="learnButton" onClick="displayLearn()">Learn</button>
+      <button style="button" id="communityButton" onClick="displayCommunity()">Community</button>
+      <button style="button" id="signInButton">Sign In</button>
+ 
+    </div>
+ 
+    <div id="middleSpace">
+ 
+    </div>
+ 
+    <div class="keys">
+      <ul class="set">
+        <li class="white b">
+        </li>
+        <li class="black as"></li>
+        <li class="white a"></li>
+        <li class="black gs"></li>
+        <li class="white g"></li>
+        <li class="black fs"></li>
+        <li class="white f"></li>
+        <li class="white e"></li>
+ 
+ 
+        <li class="black ds"></li>
+        <li class="white d"></li>
+        <li class="black cs"></li>
+        <li class="white c"></li>
+        <li class="white b"></li>
+ 
+        <li class="black as"></li>
+        <li class="white a"></li>
+        <li class="black gs"></li>
+        <li class="white g"></li>
+        <li class="black fs"></li>
+        <li class="white f"></li>
+        <li class="white e"></li>
+ 
+        <li class="black ds"></li>
+        <li class="white d"></li>
+        <li class="black cs"></li>
+        <li class="white c"></li>
+ 
+         
+        <section id="main">
+        
+          <div class="nowplaying"></div>
+          
+          <div class="keys">
+            <div data-key="65" class="key" data-note="C">
+                <span class="hints"></span>
+            </div>
+            <div data-key="87" class="key sharp" data-note="C#">
+                <span class="hints"></span>
+            </div>
+            <div data-key="83" class="key" data-note="D">
+                <span class="hints"></span>
+            </div>
+            <div data-key="69" class="key sharp" data-note="D#">
+                <span class="hints"></span>
+            </div>
+            <div data-key="68" class="key" data-note="E">
+                <span class="hints"></span>
+            </div>
+            <div data-key="70" class="key" data-note="F">
+                <span class="hints"></span>
+            </div>
+            <div data-key="84" class="key sharp" data-note="F#">
+                <span class="hints"></span>
+            </div>
+            <div data-key="71" class="key" data-note="G">
+                <span class="hints"></span>
+            </div>
+            <div data-key="89" class="key sharp" data-note="G#">
+                <span class="hints"></span>
+            </div>
+            <div data-key="72" class="key" data-note="A">
+                <span class="hints"></span>
+            </div>
+            <div data-key="85" class="key sharp" data-note="A#">
+                <span class="hints"></span>
+            </div>
+            <div data-key="74" class="key" data-note="B">
+                <span class="hints"></span>
+            </div>
+            <div data-key="75" class="key" data-note="C">
+                <span class="hints"></span>
+            </div>
+            <div data-key="79" class="key sharp" data-note="C#">
+                <span class="hints"></span>
+            </div>
+            <div data-key="76" class="key" data-note="D">
+                <span class="hints"></span>
+            </div>
+            <div data-key="80" class="key sharp" data-note="D#">
+                <span class="hints"></span>
+            </div>
+            <div data-key="186" class="key" data-note="E">
+                <span class="hints"></span>
+            </div>
+          </div>
+ 
+ 
+          <audio data-key="65" src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"></audio>
+          <audio data-key="87" src="http://carolinegabriel.com/demo/js-keyboard/sounds/041.wav"></audio>
+          <audio data-key="83" src="http://carolinegabriel.com/demo/js-keyboard/sounds/042.wav"></audio>
+          <audio data-key="69" src="http://carolinegabriel.com/demo/js-keyboard/sounds/043.wav"></audio>
+          <audio data-key="68" src="http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav"></audio>
+          <audio data-key="70" src="http://carolinegabriel.com/demo/js-keyboard/sounds/045.wav"></audio>
+          <audio data-key="84" src="http://carolinegabriel.com/demo/js-keyboard/sounds/046.wav"></audio>
+          <audio data-key="71" src="http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav"></audio>
+          <audio data-key="89" src="http://carolinegabriel.com/demo/js-keyboard/sounds/048.wav"></audio>
+          <audio data-key="72" src="http://carolinegabriel.com/demo/js-keyboard/sounds/049.wav"></audio>
+          <audio data-key="85" src="http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav"></audio>
+          <audio data-key="74" src="http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav"></audio>
+          <audio data-key="75" src="http://carolinegabriel.com/demo/js-keyboard/sounds/052.wav"></audio>
+          <audio data-key="79" src="http://carolinegabriel.com/demo/js-keyboard/sounds/053.wav"></audio>
+          <audio data-key="76" src="http://carolinegabriel.com/demo/js-keyboard/sounds/054.wav"></audio>
+          <audio data-key="80" src="http://carolinegabriel.com/demo/js-keyboard/sounds/055.wav"></audio>
+          <audio data-key="186" src="http://carolinegabriel.com/demo/js-keyboard/sounds/056.wav"></audio>
+ 
+        </section>
+ 
+      </ul>
+    </div>
+    <audio data-key="65" src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"></audio>
+ 
+  </body>
+ 
+</html>
