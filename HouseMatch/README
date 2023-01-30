@@ -1,0 +1,6 @@
+To run this program, one must first be using WinPython, or have the Pandas library.
+
+Then one must run the GenerateHouses and GeneratePeople to create a set of houses and people to be used in HouseMatch.
+
+Once a set of houses and people have been created, the HouseMatch program will create a visual representation of how the attributes of the people match them
+to houses.
